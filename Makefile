@@ -21,7 +21,7 @@ all: $(BINS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 bam2orf: bam2orf.o $(AR)
-	$(CC) $(CFLAGS) $< $(AR) -o $@ -L$(SAMTOOLS_LIB) -lbam -lz
+	$(CC) $(CFLAGS) $< $(AR) -o $@ -L$(SAMTOOLS_LIB) -lbam -lz -lpthread
 
 Makefile.depend:
 	touch Makefile.depend
